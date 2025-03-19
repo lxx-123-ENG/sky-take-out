@@ -36,5 +36,18 @@ public interface EmployeeMapper {
     //这里是动态查询，因此不打算用注解，打算写在映射文件中
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
+    /**
+     * 根据id修改员工
+     * @param employee
+     */
     void update(Employee employee);
+
+
+    /**
+     * 根据id查询员工
+     * @param id
+     * @return
+     */
+    @Select("select * from employee where id = #{id}")
+    Employee getById(Long id);
 }
