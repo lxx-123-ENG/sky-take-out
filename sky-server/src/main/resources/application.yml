@@ -35,6 +35,7 @@ logging:
         controller: info
 
 sky:
+
   jwt:
     # 设置jwt签名加密时使用的秘钥
     admin-secret-key: itcast
@@ -58,3 +59,8 @@ sky:
   wechat:
     app-id: ${sky.wechat.appid}
     secret: ${sky.wechat.secret}
+
+  shop:
+    address: ${sky.shop.address}
+  baidu:
+    ak: ${sky.baidu.ak}
